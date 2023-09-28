@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="1" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="5" time="91.314656">
+<testcase classname="Validate the forgot password functionality of Argos Website" name="Validate the forgot password link functionality of Argos Website" time="17.305075">
+<system-out><![CDATA[Given User should launch the browser and load the url.......................passed
+When User clicks on the Forgot Passwork link................................passed
+Then User should navigate to the Forgot Password Reset Page.................passed
+]]></system-out>
+</testcase>
+<testcase classname="Validating the Login Functionality of Argos Website" name="Validating the login functionality with invalid username and valid password" time="20.878858">
+<system-out><![CDATA[When User should enter the invalid username and valid password..............passed
+And User should click on login button.......................................passed
+Then Invalid Credentials page should be displayed...........................passed
+]]></system-out>
+</testcase>
+<testcase classname="Validating the Login Functionality of Argos Website" name="Validating the login functionality with valid username and valid password" time="12.238055">
+<failure message="java.lang.AssertionError: Invalid Credentials&#13;&#10;&#9;at org.junit.Assert.fail(Assert.java:88)&#13;&#10;&#9;at org.junit.Assert.assertTrue(Assert.java:41)&#13;&#10;&#9;at org.stepdefinition.LoginStepDefinition.homePageShouldBeDisplayed(LoginStepDefinition.java:90)&#13;&#10;&#9;at ✽.Home page should be displayed(file:src/test/resources/Feature/Login.feature:14)&#13;&#10;"><![CDATA[When User should enter the valid username and password......................passed
+And User should click on login button.......................................passed
+Then Home page should be displayed..........................................failed
+
+StackTrace:
+java.lang.AssertionError: Invalid Credentials
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at org.stepdefinition.LoginStepDefinition.homePageShouldBeDisplayed(LoginStepDefinition.java:90)
+	at ✽.Home page should be displayed(file:src/test/resources/Feature/Login.feature:14)
+]]></failure>
+</testcase>
+<testcase classname="Validating the Login Functionality of Argos Website" name="Validating the login functionality with valid username and invalid password" time="24.934889">
+<system-out><![CDATA[When User should enter the valid "validuser1@gmail.com" and invalid "Password@123".passed
+And User should click on login button.......................................passed
+Then Invalid Credentials page should be displayed...........................passed
+]]></system-out>
+</testcase>
+<testcase classname="Validate the product selection functionality in Argos website" name="Validate the product selection functionality" time="15.957779">
+<system-out><![CDATA[Given User should launch the browser and load the url.......................passed
+When User should login with valid username and password.....................passed
+And User search for the products to be selected.............................passed
+And User should add the product to the cart.................................passed
+Then Product selected by the user should be added to the cart...............passed
+]]></system-out>
+</testcase>
+</testsuite>
